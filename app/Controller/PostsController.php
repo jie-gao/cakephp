@@ -1,7 +1,8 @@
 <?php
 
 class PostsController extends AppController {
-  public $helps = array('Html', 'Form');
+  public $helps = array('Html', 'Form', 'Session');
+  public $component = array('Session');
   
   public function index(){
     $this->set('posts', $this->Post->find('all'));
@@ -17,5 +18,15 @@ class PostsController extends AppController {
       throw new NotFoundException(_('Invalid post'));
     }
     $this->set('post', $post);
+  }
+  public function add() {
+    if($this->request->is('post')) {
+      $this->Post->create();
+      if ($this->Post->save($this->request->data)) {
+        $this->Session->setFlash(_('Your post has been saved.'));
+        return $this->redirect(array('action' => 'index'));
+      }
+      $this->Session->setFlash(_('Unable to add your post.'));
+    }
   }
 }
