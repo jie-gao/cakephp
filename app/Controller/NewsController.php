@@ -1,12 +1,20 @@
 <?php
 
-//App::uses('file_get_html', 'Vendor/simple_html_dom');
 App::import('Vendor','simple_html_dom');
+//App::import('Vendor', 'Net/UserAgent/Mobile', array('file' => 'Net' . DS . 'UserAgent' . DS . 'Mobile.php'));
+
 class NewsController extends AppController {
+
   public $helps = array('Html', 'Form', 'Session');
   public $component = array('Session');
   
   public function index(){
+
+    $userAgent = isset($_SERVER['HTTP_USER_AGENT'])
+               ? strtolower($_SERVER['HTTP_USER_AGENT'])
+               : '';    
+    echo $userAgent; 
+
  //   $this->set('posts', $this->Post->find('all'));
     $url = "http://news.ifeng.com";
     $html = file_get_html($url);

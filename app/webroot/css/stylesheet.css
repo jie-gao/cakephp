@@ -1,0 +1,110 @@
+* {margin:0;padding:0;}
+body { background-color:#333333;
+       font-family: Georgia, "Times New Roman", Times, serif;
+       font-size:90%;
+       margin: 0;
+     }     
+h1, h2 { background-color: inherit;
+        font-weight: normal;
+     }
+h2 { color:#000066;
+     font-size: 190%;
+     margin-top:4px;     }     
+#header{ padding: 25px 20px;}     
+#header h1 a {color: #ffffff;
+              text-decoration: none;
+         }     
+#header h1 a:hover {
+        color: #ff9900;
+        text-decoration: none;
+      }
+#content{
+        background-color: #fff;
+        clear: both;
+        color: #666;
+        padding: 10px 20px 40px 20px;
+        overflow: auto;
+     }     
+#footer {
+        clear: both;
+        padding: 6px 10px;
+        text-align: right; 
+       color:#CCCCCC;
+     }     
+dl {
+        line-height: 2em;
+        margin: 0em 0em;
+        width: 60%;
+     }     
+dt.header {
+        color:#333333;
+        font-size:124%; 
+       margin-top: 12px;
+     }     
+dt {
+        font-weight: bold;
+        padding-left: 4px;
+        vertical-align: top;
+     }     
+dd {
+        margin-left: 10em;
+        margin-top: -2em;
+        vertical-align: top;
+     }     
+form {
+        clear: both;
+        margin: 10px;
+     }     
+form label {
+        width:94px;
+        display:block;
+        float:left;
+     }     
+form div.input {margin:13px;}     
+form div.submit {margin:20px 0 0 12px;}
+#box{width:800;margin:0px;padding:0px;}
+#box0{
+      width:255px;
+      height:197px;
+      float:left;
+}
+#box1{
+      width:545px;
+      height:197px;
+      float:left;
+}
+#box2{
+      border:1px;
+      width:800px;
+      height:250px;
+      float:left;
+}
+#box3{
+      width:800px;
+      height:250px;
+}
+
+table.main{
+  /*   border-style:dashed; 
+     border-width:1px; 
+     border-color:#3366FF; 
+     background:#FFFFFF   */
+     border-collapse:collapse;
+}
+td.item {
+     border-style:dashed;
+     border-width:1px;
+     border-color:#3366FF;
+     text-align:left; 
+     padding:5px;  
+     width:150px; 
+     background-color:#FFF8DC
+}
+td.value {
+     border-style:dashed;
+     border-width:1px;
+     border-color:#3366FF;
+     text-align:left;
+     width:150px;
+     padding:5px
+}
