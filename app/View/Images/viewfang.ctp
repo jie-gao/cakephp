@@ -3,7 +3,9 @@
 <div id="box">
 
 <div id="box0" class="">
-<?php echo $this->Html->image(__("/images/contents/{$image['Image']['filename']}"), array('width'=>'90%','height'=>'90%'), array('action' => "/contents/{$image['Image']['filename']}" ), array ( 'target' => '_blank' ) );?></div>
+<?php echo $this -> Html -> image(__("/images/contents/{$image['Image']['filename']}"), array('width' => '90%', 'height' => '90%'), array('action' => "/contents/{$image['Image']['filename']}"), array ('target' => '_blank'));
+?>
+</div>
 <div id="box1" class="">
 <table class="main">
 <tr>
@@ -34,7 +36,7 @@
 <td class="item">周边设施</td>
 <td class="value">一完小，四中,机场,高级中学</td>
 <td class="item">手续等</td>
-<td class="value">手续齐全，可立即班里转让</td>
+<td class="value">手续齐全，可立即办理转让</td>
 </tr>
 </table>
 </div>
@@ -43,17 +45,15 @@
 <hr>
 <br>
  <table border>
-<tr>
-<td>
-<?php echo $this->Html->image(__("/images/contents/{$image['Image']['filename']}"), array('width'=>'50%','height'=>'50%'), array('action' => "/contents/{$image['Image']['filename']}" ), array ( 'target' => '_blank' ), array('aligh' => 'left'));?>
-</td>
-<td>
-<?php echo $this->Html->image(__("/images/contents/{$image['Image']['filename']}"), array('width'=>'50%','height'=>'50%'), array('action' => "/contents/{$image['Image']['filename']}" ), array ( 'target' => '_blank' ), array('align' => 'left'));?>
-</td>
-</tr>
+ <?php foreach ($images as $i): ?>
+  <?php echo $this -> Html -> image(__("/images/contents/{$i['Image']['filename']}"), array('width' => '25%', 'height' => '25%'), array('action' => "/contents/{$i['Image']['filename']}"), array ('target' => '_blank'), array('url' => "/contents/{$i['Image']['filename']}"));
+?>
+&nbsp;
+ <?php endforeach;
+?> 
 </table>
 </div>
-
+ 
 <div id="box3" class="">
 <h1>联系方式</h1>
 <hr>
@@ -77,9 +77,7 @@
 </tr>
 </table>
 <br>
-<h1>留言</h1>
-<br>
 <br>
 </div>
-
+ 
 </div>

@@ -49,17 +49,23 @@ class ImagesController extends AppController {
    function viewfang() {
     // $this->layout = false; 
     $this->layout = 'image';  
-    $id = 1;                               
+    $id = 15;                               
      if(!$id){
 	throw new NotFoundException(_('Invalid post'));
       }
 
       $image = $this->Image->findById($id);
-      
-     if (!$image){
-        throw new NotFoundException(_('Invalid post'));
+      $images_all = $this->Image->find('all');
+      //$images = array_pop($images_all);  
+      array_pop($images_all);  
+      if (!$image){
+        throw new NotFoundException(_('Invalid image'));
+      }
+      if (!$images_all){
+        throw new NotFoundException(_('Invalid image'));
       }
       $this->set('image', $image);
+      $this->set('images',$images_all);
       header('Content-type: ' . $image['Image']['filetype'] );
       //$this->pageTitle = 'Fang Information ';
   }

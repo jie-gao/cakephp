@@ -76,12 +76,13 @@ form div.submit {margin:20px 0 0 12px;}
 #box2{
       border:1px;
       width:800px;
-      height:250px;
-      float:left;
+      height:600px;
+      float:right;
 }
 #box3{
-      width:800px;
-      height:250px;
+      width:400px;
+      height:200px;
+     float:left
 }
 
 table.main{
